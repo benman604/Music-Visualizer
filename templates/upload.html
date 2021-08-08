@@ -1,0 +1,37 @@
+{% extends "home.html" %}
+
+{% block content %}
+<div class="container">
+    <br/>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm" action="/search">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="btn-group">
+                        <a href="/" class="btn btn-secondary">Search</a>
+                        <a href="#" class="btn btn-primary">Upload</a>
+                        <a href="/url" class="btn btn-secondary">Youtube</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card card-sm">
+                <div class="card-body row no-gutters">
+                    <form action="/upload/play" method="POST" enctype="multipart/form-data">
+                        {{err}}
+                        <label for="exampleFormControlFile1">Upload an audio file</label> <br>
+                        <input type="file" class="form-control-file" name="file" required accept=".mp3"> <br><br>
+                        <input type="submit" value="Play" class="btn btn-success" style="width: 100% !important">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

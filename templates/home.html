@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Music Visualizer</title>
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand" href="#" style="margin-left: 20px; margin-right: 20px;">
+            <em class="fas fa-compact-disc" style="font-size:large"></em>
+            3D Music Visualizer
+        </span>
+        <a class="navbar-text" href="https://github.com" style="margin-right: 20px;">Code</a>
+    </nav>
+    <br><br>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <img src="/static/screenshot.PNG" alt="Screenshot" style="width: 500px !important;">
+        </div>
+    </div>
+
+    <div style="margin-top: 0; margin-bottom: 40px;">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+</body>
+</html>
