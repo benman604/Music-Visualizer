@@ -38,7 +38,7 @@ function mouseWheel(event){
     zoom = constrain(zoom, zmin, zmax)
 }
 function draw(){
-    background(0)
+    background(50)
 
     if(is3d){
         orbitControl(10, 10, 0);

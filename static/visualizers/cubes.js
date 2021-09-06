@@ -20,6 +20,6 @@ function update(){
         }
         translate(0, -gridCount * step)
     }
-    srotate(Math.cos(a), 0, Math.sin(a*2))
+    srotate(Math.sin(a*2)/4 + 92, 0, a/2)
     a+=0.01
 }
