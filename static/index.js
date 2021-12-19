@@ -1,5 +1,6 @@
 var soundFile, fft
 var is3d = true
+var rotatable = true
 function preload(){
     soundFile = loadSound(audiofile)
 }
@@ -10,8 +11,13 @@ function setup(){
     } else{
         createCanvas(windowWidth, windowHeight)
     }
-    soundFile.loop()
+    try{
+        soundFile.loop()
+    } catch(e){
+        console.log(e)
+    }
     fft = new p5.FFT()
+    begin()
 }
 
 function windowResized() {
@@ -38,9 +44,8 @@ function mouseWheel(event){
     zoom = constrain(zoom, zmin, zmax)
 }
 function draw(){
-    background(50)
 
-    if(is3d){
+    if(is3d && rotatable){
         orbitControl(10, 10, 0);
         rotateX(x)
         rotateY(y)

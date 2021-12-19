@@ -1,5 +1,10 @@
+function begin(){
+
+}
+
 let a = 0
 function update(){
+    background(0)
     normalMaterial()
     let trX = -gridCount * step / 2
     translate(trX, trX - 100)

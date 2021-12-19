@@ -11,7 +11,7 @@ import time
 url = "https://deezerdevs-deezer.p.rapidapi.com/search"
 
 headers = {
-    'x-rapidapi-key': os.environ['x-rapidapi-key'],
+    'x-rapidapi-key': os.environ.get('RAPID_API_KEY'),
     'x-rapidapi-host': "deezerdevs-deezer.p.rapidapi.com"
 }
 
